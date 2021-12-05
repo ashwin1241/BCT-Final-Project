@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Election Results</title>
+
+    <!-- Bootstrap -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+    <center>
+      <div class="wrap">
+        <div >
+          <div>
+            <h1><U>Election Results</U></h1>
+            <hr/>
+            <br/>
+            <div id="loader">
+              <p><font size=5>Loading...</font></p>
+            </div>
+            <div id="content" style="display: none;">
+              <table class="spaced">
+                <thead>
+                  <tr>
+                    <th scope="col"><h2><center>Candidate Id</center></h2></th>
+                    <th scope="col"><h2><center>Candidate Name</center></h2></th>
+                    <th scope="col"><h2><center>Votes</center></h2></th>
+                    <th scope="col"><h2><center>Vote Percentage</center></h2></th>
+                  </tr>
+                </thead>
+                <tbody id="candidatesResults" class="tablebody">
+                </tbody>
+              </table>
+              <hr/>
+              <form onSubmit="App.castVote(); return false;">
+                <div class="form-group">
+                  <label for="candidatesSelect" class="labelclass">Select Candidate</label>
+                  <select id="candidatesSelect" class="selectstyle">
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary" id="custfont">VOTE</button>
+                <hr />
+              </form>
+
+              <div id="addCandidateForm">
+                <form onSubmit="App._addCandidate(); return false;" >
+                  <label class="labelclass">Candidate Name</label>
+                  <input type="text" id="candidate_name1" class="selectstyle"><br>
+                  <button type="submit" id="custfont">ADD CANDIDATE</button>
+                  <hr />
+                </form>
+              </div>
+              <p id="accountAddress" class="text-center"></p>
+            </div>
+          </div>
+        </div>  
+    </div>
+
+    <div class="wrap" id="voteCastingStatus">
+      <span id="successMessage">You have successfully casted your vote to: </span>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+  </center>
+  </body>
+</html>
