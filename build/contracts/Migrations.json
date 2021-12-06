@@ -64,7 +64,7 @@
   "sourceMap": "27:438:1:-;;;72:10;51:31;;;;;;;;;;;;;;;;;;;;27:438;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:438:1;;;;;;;",
   "deployedSourceMap": "27:438:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;298:165;;8:9:-1;5:2;;;30:1;27;20:12;5:2;298:165:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;86:36;;8:9:-1;5:2;;;30:1;27;20:12;5:2;86:36:1;;;;;;;;;;;;;;;;;;;;;;;51:31;;8:9:-1;5:2;;;30:1;27;20:12;5:2;51:31:1;;;;;;;;;;;;;;;;;;;;;;;;;;;191:103;;8:9:-1;5:2;;;30:1;27;20:12;5:2;191:103:1;;;;;;;;;;;;;;;;;;;;;;;;;;298:165;360:19;173:5;;;;;;;;;;;159:19;;:10;:19;;;155:26;;;393:11;360:45;;411:8;:21;;;433:24;;411:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;411:47:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;411:47:1;;;;155:26;298:165;;:::o;86:36::-;;;;:::o;51:31::-;;;;;;;;;;;;;:::o;191:103::-;173:5;;;;;;;;;;;159:19;;:10;:19;;;155:26;;;280:9;253:24;:36;;;;155:26;191:103;:::o",
   "source": "pragma solidity >=0.4.11;\n\ncontract Migrations {\n  address public owner=msg.sender;\n  uint public last_completed_migration;\n\n  modifier restricted() {\n    if (msg.sender == owner) _;\n  }\n\n\n  function setCompleted(uint completed) public restricted {\n    last_completed_migration = completed;\n  }\n\n  function upgrade(address new_address) public restricted {\n    Migrations upgraded = Migrations(new_address);\n    upgraded.setCompleted(last_completed_migration);\n  }\n}\n",
-  "sourcePath": "D:\\College material\\3rd year\\3-1\\BCT\\Project\\dapp_vote-dapp-master\\BCT-Final-Project\\contracts\\Migrations.sol",
+  "sourcePath": "D:\\College material\\3rd year\\3-1\\BCT\\BCT-Final-Project\\contracts\\Migrations.sol",
   "ast": {
     "absolutePath": "project:/contracts/Migrations.sol",
     "exportedSymbols": {
@@ -1306,12 +1306,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x0348f1D6dF387E4629686742251e00e2EEE0Ff8D",
-      "transactionHash": "0x4ae9b71482b02654f272a40560cc32c0b9cacf926b8431879cd690ec3d771191"
+      "address": "0xa68FE457797c7F5dc592B85423D9107F93a724F9",
+      "transactionHash": "0xe7e728da85f79455197230cd41f2c6590e98520611c59c4164d453a35b373a8e"
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-12-05T13:07:47.163Z",
+  "updatedAt": "2021-12-05T17:40:12.792Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
